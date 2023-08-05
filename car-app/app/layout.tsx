@@ -1,10 +1,9 @@
-import Navbar from "@/components/Navbar";
+import { Navbar, Footer } from "@/components";
 import "./globals.css";
 import type { Metadata } from "next";
-import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "ALLIANCECOs",
+  title: "Car Hub",
   description: "created by alliance companies.",
 };
 
@@ -16,9 +15,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Navbar/>
+        <Navbar />
         {children}
-        <Footer/></body>
+        <Footer />
+      </body>
     </html>
   );
 }
