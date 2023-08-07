@@ -1,9 +1,18 @@
+/* eslint-disable tailwindcss/classnames-order */
 "use client";
 import Image from "next/image";
 import CustomButton from "./CustomButton";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 const Hero = () => {
-  const handleScroll = () => {};
+  const handleScroll = () => {
+    const nextSection = document.getElementById("discover");
+
+    if (nextSection) {
+      nextSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <div className="hero">
       <div className="flex-1 pt-36 padding-x">
@@ -23,13 +32,9 @@ const Hero = () => {
       </div>
       <div className="hero__image-container">
         <div className="hero__image">
-          <Image
-            src="/hero.png"
-            alt="hero image"
-            fill
-            className="object-contain"
-          />
+          <Image src="/hero.png" alt="hero" fill className="object-contain" />
         </div>
+
         <div className="hero__image-overlay" />
       </div>
     </div>
