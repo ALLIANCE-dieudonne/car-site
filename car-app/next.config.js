@@ -4,7 +4,7 @@ const nextConfig = {
     domains: ["cdn.imagin.studio"],
   },
   typescript: {
-    ignoreBuilErrors: true,
+    ignoreBuildErrors: true,
   },
 };
 
